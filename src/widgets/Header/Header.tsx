@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import HeaderNav from "./components/HeaderNav";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,24 +14,33 @@ export const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-black/80 backdrop-blur-md'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="flex items-center justify-between px-8 py-4">
-        <div className="font-bold text-lg">
-          Sanzhar.dev
-        </div>
+<header className="w-full px-6 py-4 bg-black text-white">
+  <div className="grid grid-cols-[1fr_auto_1fr] items-center">
 
-        <nav className="flex gap-6 text-sm text-gray-300">
-          <a href="#">Проекты</a>
-          <a href="#">Обо мне</a>
-          <a href="#">Контакты</a>
-        </nav>
+    {/* LEFT */}
+    <div className="flex items-center gap-4 justify-self-start">
+      <button className="text-gray-400 text-xl">
+        ☰
+      </button>
+
+      <div className="font-bold text-xl tracking-wide">
+        SanzharDev
       </div>
-    </header>
+    </div>
+
+    {/* CENTER */}
+          <HeaderNav />
+
+
+    {/* RIGHT */}
+    <div className="flex items-center gap-4 justify-self-end">
+      <button className="text-gray-400">🔍</button>
+      <button className="text-gray-400">◻</button>
+
+      <div className="w-8 h-8 rounded-full bg-gray-500"></div>
+    </div>
+
+  </div>
+</header>
   );
 };
