@@ -1,5 +1,6 @@
 import { Header } from '@/widgets/Header/Header';
 import { Footer } from '@/widgets/Footer/Footer';
+import { Hero } from '@/widgets/Hero/Hero';
 
 export const HomePage = () => {
   return (
@@ -7,8 +8,8 @@ export const HomePage = () => {
       <Header />
 
         <section>
-          <div className=" h-180 flex-1 pt-20 px-8">
-
+          <div className=" h-220 flex-1">
+              <Hero />
           </div>
         </section>
 
