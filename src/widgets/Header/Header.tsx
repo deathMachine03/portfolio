@@ -24,7 +24,7 @@ export const Header = () => {
       </button>
 
       <div className="font-bold text-xl tracking-wide">
-        SanzharDev
+        Sanzhar
       </div>
     </div>
 
